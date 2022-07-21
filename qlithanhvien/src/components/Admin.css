@@ -47,18 +47,21 @@ td, th{
     text-align: center;
     font-style: italic;
     font-weight: 500;
+    color: #2D7234;
+    background-color: #81C2AB;
+    text-transform: uppercase;
 }
 
 
 .input_search:hover{
-    background-color: #9fe7cf;
+    background-color: #fff;
     color: #333;
     cursor: pointer;
 }
 
 .input_search:focus{
     outline: none;
-    background-color: #9fe7cf;
+    background-color: #fff;
     color: #333;
 }
 
@@ -69,25 +72,32 @@ td, th{
 .button_edit{
     outline: none;
     border-radius: 10px;
-    border: 1px solid #2D7234;
-    background-color: #9bc49b;
+    border: 2px solid #ececec;
+    background-color: #24752b;
     font-size: 0.9rem;
     width: 50px;
     height: 30px;
     margin-right: 10px;
+    color: #fff;
 }
 
 .button_delete{
     outline: none;
     border-radius: 10px;
-    border: 1px solid #2D7234;
-    background-color: #9bc49b;
+    border: 2px solid #ececec;
+    background-color: #d81111;
     font-size: 0.9rem;
     width: 50px;
-    height: 30px
+    height: 30px;
+    color: #fff;
 }
 
-.btn-hover:hover{
-    background-color: rgb(115, 177, 141);
+.button_delete:hover{
+    background-color: #ff2525;
+    cursor: pointer;
+}
+
+.button_edit:hover{
+    background-color: #2e9236;
     cursor: pointer;
 }
