@@ -1,10 +1,10 @@
-import logo from './logo.svg';
+import Admin from './components/Admin';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      Alo
+      <Admin/>
     </div>
   );
 }

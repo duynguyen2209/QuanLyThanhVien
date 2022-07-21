@@ -1,0 +1,93 @@
+.wrapper{
+    background-color: #99B6B2;
+    height: 100vh;
+}
+
+.header_title{
+    margin-top: 0;
+    text-transform: uppercase;
+    color:  #2D7234;
+    padding-top: 40px;
+}
+.Container_Table{
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+td, th{
+    border: 1px solid #f2f2fa;
+    font-weight: 500;
+    padding: 10px;
+    width: 110px;
+    height: 40px;
+    font-size: .8rem;
+}
+
+
+.detechborder1{
+    text-align: left;
+    padding-left: 30px;
+    border-right: transparent;
+    text-transform: uppercase;
+    color: #226C2A;
+    font-size: 1.2rem;
+}
+
+.detechborder2{
+    border-left: transparent;
+}
+.input_search{
+    width: 80%;
+    align-items: center;
+    height: 30px;
+    border-radius: 10px;
+    font-size: 0.9rem;
+    text-align: center;
+    font-style: italic;
+    font-weight: 500;
+}
+
+
+.input_search:hover{
+    background-color: #9fe7cf;
+    color: #333;
+    cursor: pointer;
+}
+
+.input_search:focus{
+    outline: none;
+    background-color: #9fe7cf;
+    color: #333;
+}
+
+.TableMangage{
+    border: 2px solid #ccc;
+}
+
+.button_edit{
+    outline: none;
+    border-radius: 10px;
+    border: 1px solid #2D7234;
+    background-color: #9bc49b;
+    font-size: 0.9rem;
+    width: 50px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+.button_delete{
+    outline: none;
+    border-radius: 10px;
+    border: 1px solid #2D7234;
+    background-color: #9bc49b;
+    font-size: 0.9rem;
+    width: 50px;
+    height: 30px
+}
+
+.btn-hover:hover{
+    background-color: rgb(115, 177, 141);
+    cursor: pointer;
+}
