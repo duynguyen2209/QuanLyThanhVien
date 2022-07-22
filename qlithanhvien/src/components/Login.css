@@ -9,12 +9,12 @@
     text-transform: uppercase;
     text-align: center;
     margin-top: 0;
-    padding-top: 25px;
+    padding-top: 120px;
     color:  #2D7234;
     margin-bottom: 0;
 }
 .form-login{
-    padding: 20px;
+    padding: 10px;
     color: #264B33;
     display: flex;
     justify-content: center;
@@ -26,6 +26,7 @@
     font-weight: 500;
     margin-right: 10px;
     width: 115px;
+    font-size: 1.1rem;
 }
 .input_login{
     width: 150px;
@@ -34,6 +35,7 @@
     border: 1px solid #264B33;
     border-radius: 10px;
     font-size: .9rem;
+    text-indent: 10px;
 }
 
 .input_login:hover{
@@ -53,17 +55,18 @@
     margin-bottom: 10px;
 }
 .btn-submit{
+    margin-top: 10px;
     outline: none;
     text-align: center;
     height: 40px;
-    width: 150px;
+    width: 100px;
     text-transform: uppercase;
     font-weight: 500;
     background-color: #3F8171;
     border: 1px solid #264B33;
     border-radius: 10px;
     cursor: pointer;
-    font-size: .7rem;
+    font-size: .6rem;
     color: #fff;
 }
 

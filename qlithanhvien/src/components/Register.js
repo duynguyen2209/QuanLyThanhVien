@@ -51,7 +51,7 @@ function Register() {
 
             <div className='wrap2'>
               <div className='form-group'>
-                <div className='lable_register'>Ngày sinh<span className='red'>*</span>:</div>
+                <div className='lable_register'>Ngày sinh (dd/mm/yyyy)<span className='red'>* </span>:</div>
                 <br />
                 <input
                   className='input_register'
@@ -68,9 +68,9 @@ function Register() {
                 <br />
                 <input
                   className='input_register'
-                  placeholder='Email'
+                  placeholder='@gmail.com'
                   type="text"
-                  required
+                  required                  
                 // onChange={(e) => setDetails({ ...details, usernumber: e.target.value })}
                 >
                 </input>

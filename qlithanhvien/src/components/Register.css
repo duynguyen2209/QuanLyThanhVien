@@ -13,12 +13,12 @@
     text-transform: uppercase;
     text-align: center;
     margin-top: 0;
-    padding-top: 25px;
+    padding-top: 120px;
     color:  #2D7234;
     margin-bottom: 0;
 }
 .form-group{
-    padding: 20px;
+    padding: 10px;
     color: #264B33;
     display: block;
     justify-content: center;
@@ -28,15 +28,17 @@
 .lable_register{
     margin-bottom: -15px;
     font-weight: 500;
-    width:130px;
+    width:185px;
+    margin-left: 10px;
 }
 .input_register{
-    width: 260px;
+    width: 200px;
     height: 30px;
     outline: none;
     border: 1px solid #264B33;
     border-radius: 10px;
     font-size: .9rem;
+    text-indent: 10px;
 }
 
 .input_register:hover{
