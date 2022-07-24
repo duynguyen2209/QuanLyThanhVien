@@ -1,8 +1,42 @@
-import React from 'react';
+import React, { useState } from 'react';
 import NumberFormat from 'react-number-format';
 import './Register.css'
+import axios from 'axios';
 
 function Register() {
+  const [fullname, Setfullname] = useState('');
+  const [dateofbirth, Setdateofbirth] = useState('');
+  const [phonenumber, Setphonenumber] = useState('');
+  const [email, Setemail] = useState('');
+  const [password, Setpassword] = useState('');
+  const [location, Setlocation] = useState('');
+  const [level, Setlevel] = useState('Members');
+  const url = "http://localhost:8800";
+
+  const sendData = {
+    fullname, dateofbirth, phonenumber, location, email, password, level
+  }
+
+  const handelChange = (set, value) => {
+    set(value)
+  }
+
+
+  const handleSubmit = async (e) => {
+    try {
+      await axios.post(`${url}/api/customer/new`, {
+        fullname: fullname,
+        password: password,
+        email: email,
+        dateofbirth: dateofbirth,
+        location: location,
+        phone_number: phonenumber,
+        level:'Member'
+      });
+      console.log('adsf');
+    } catch (err) { }
+  }
+
   return (
     <div>
       <form className='fomr-register'>
@@ -15,10 +49,11 @@ function Register() {
                 <br />
                 <input
                   className='input_register'
+                  value={fullname}
                   placeholder='Họ và tên'
                   type="text"
                   required
-                // onChange={(e) => setDetails({ ...details, usernumber: e.target.value })}
+                  onChange={(e) => handelChange(Setfullname, e.target.value)}
                 >
                 </input>
               </div>
@@ -28,10 +63,11 @@ function Register() {
                 <br />
                 <NumberFormat maxLength={10}
                   className='input_register'
+                  value={phonenumber}
                   required
                   thousandSeparator={false} prefix={''}
                   placeholder='Số điện thoại'
-                  // value={this.state.datagroup.p_holdingrate}
+                  onValueChange={(e) => handelChange(Setphonenumber, e.value)}
                   decimalScale={0} allowNegative={false} />
               </div>
 
@@ -40,10 +76,11 @@ function Register() {
                 <br />
                 <input
                   className='input_register'
+                  value={password}
                   placeholder='Mật khẩu'
                   type="password"
                   required
-                // onChange={(e) => setDetails({ ...details, usernumber: e.target.value })}
+                  onChange={(e) => handelChange(Setpassword, e.target.value)}
                 >
                 </input>
               </div>
@@ -55,10 +92,11 @@ function Register() {
                 <br />
                 <input
                   className='input_register'
+                  value={dateofbirth}
                   placeholder='Ngày sinh'
                   type="text"
                   required
-                // onChange={(e) => setDetails({ ...details, usernumber: e.target.value })}
+                  onChange={(e) => handelChange(Setdateofbirth, e.target.value)}
                 >
                 </input>
               </div>
@@ -68,10 +106,11 @@ function Register() {
                 <br />
                 <input
                   className='input_register'
+                  value={email}
                   placeholder='@gmail.com'
                   type="text"
-                  required                  
-                // onChange={(e) => setDetails({ ...details, usernumber: e.target.value })}
+                  required
+                  onChange={(e) => handelChange(Setemail, e.target.value)}
                 >
                 </input>
               </div>
@@ -80,10 +119,11 @@ function Register() {
                 <br />
                 <input
                   className='input_register'
+                  value={location}
                   placeholder='Địa chỉ'
                   type="text"
                   required
-                // onChange={(e) => setDetails({ ...details, usernumber: e.target.value })}
+                  onChange={(e) => handelChange(Setlocation, e.target.value)}
                 >
                 </input>
               </div>
@@ -91,10 +131,11 @@ function Register() {
             </div>
           </div>
           <div className='wrapbtn'>
-            <button type='Submit' className='btn-submit'>Đăng ký</button>
+            <button className='btn-submit' onClick={handleSubmit}>Đăng ký</button>
           </div>
         </div>
       </form>
+
     </div>
   );
 }

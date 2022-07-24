@@ -64,6 +64,7 @@ function Admin() {
               <th>EMAIL</th>
               <th>NGÀY SINH</th>
               <th>HẠNG</th>
+              <th>Điểm</th>
               <th>NGÀY XEM GẦN NHẤT</th>
               <th>SỬA/XOÁ TÀI KHOẢN</th>
             </tr>
@@ -76,8 +77,9 @@ function Admin() {
                 <td>{item.location}</td>
                 <td>{item.email}</td>
                 <td>{item.dateofbirth}</td>
-                <td></td>
-                <td></td>
+                <td>{item.level}</td>
+                <td>{item.point}</td>
+                <td>{item.last_seen}</td>
                 <td >
                   <button className='button_edit btn-hover'>Sửa</button>
                   <button className='button_delete btn-hover' onClick={()=>handleDelete(item._id)}>Xoá</button>
